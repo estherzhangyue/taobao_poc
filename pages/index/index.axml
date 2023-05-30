@@ -1,0 +1,4 @@
+<view class = "page">
+  <view class="centerBtn" onTap="onButtonTap">Go To Webpage</view>
+  <view class="centerBtn" onTap="onDefaultButtonTap">Show Default</view>
+</view>

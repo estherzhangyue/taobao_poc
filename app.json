@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/webpage/webpage",
+    "pages/native/native"
+  ],
+  "window": {
+    "defaultTitle": "POC"
+  }
+}

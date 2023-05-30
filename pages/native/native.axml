@@ -1,0 +1,63 @@
+<view class="page">
+  <canvas touch-action="none" id="canvas" style="width: 100%; height: 100%; touch-action: none;" width="3022" height="964" data-engine="Babylon.js v6.4.1" tabindex="1"></canvas>
+  <view class="tool">
+    <view class="tool_left">
+    <text class="configurator__section__title h3">Outsole</text>
+    <text class="configurator__section__title h4">Color</text>
+    <view class="configurator__section__values">
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(104, 52, 52);"></view>
+        <text class="item__label">brown</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(26, 94, 26);"></view>
+        <text class="item__label">green</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(101, 153, 148);"></view>
+        <text class="item__label">blue</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(137, 101, 153);"></view>
+        <text class="item__label">mauve</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(255, 165, 0);"></view>
+        <text class="item__label">orange</text>
+      </view>
+    </view>
+    <text class="configurator__section__title h4">Material</text>
+    <view class="configurator__section__values">
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(104, 52, 52);"></view>
+        <text class="item__label">base</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(26, 94, 26);"></view>
+        <text class="item__label">fabric</text>
+      </view>
+      <view class="item">
+        <view class="item__dot" style="background-color: rgb(101, 153, 148);"></view>
+        <text class="item__label">leather</text>
+      </view>
+    </view>
+    </view>
+    <view class="tool_right">
+      <text class="configurator__section__title h3">Insole color</text>
+      <view class="configurator__section__values">
+        <view class="item">
+          <view class="item__dot" style="background-color: rgb(236, 236, 236);"></view>
+          <text class="item__label">white</text>
+        </view>
+        <view class="item">
+          <view class="item__dot" style="background-color: rgb(89, 85, 91);"></view>
+          <text class="item__label">gray</text>
+        </view>
+        <view class="item">
+          <view class="item__dot" style="background-color: rgb(34, 34, 34);"></view>
+          <text class="item__label">black</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

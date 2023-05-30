@@ -1,0 +1,19 @@
+{
+  "name": "taobao_mini-program",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babylonjs-hook": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babylonjs/core": "^6.5.0",
+    "@babylonjs/gui": "^6.5.0",
+    "@babylonjs/loaders": "^6.5.0"
+  }
+}

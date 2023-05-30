@@ -1,0 +1,83 @@
+.page{
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #342441;
+  color: #213547;
+  place-items: center;
+}
+
+.canvas#canvas {
+  aspect-ratio: auto 3022 / 964;
+}
+
+.tool{
+  position: fixed;
+  left: 50%;
+  transform: translate(-45%);
+  bottom: 1vh;
+  width: 360px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.tool_left{
+  display: block;
+}
+
+.configurator__section__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Poppins,sans-serif;
+  color: #fff;
+  display: block;
+}
+
+.h3 {
+  font-size: 1.17em;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+}
+
+.h4 {
+  display: block;
+margin-block-start: 1.33em;
+margin-block-end: 1.33em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+}
+
+.configurator__section__values{
+  display: flex;
+flex-direction: row;
+gap: 16px;
+align-items: center;
+flex-wrap: wrap;
+padding: 8px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .4s;
+  }
+
+.item__dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: solid 2px #999999;
+}
+
+.item__label {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: capitalize;
+  }

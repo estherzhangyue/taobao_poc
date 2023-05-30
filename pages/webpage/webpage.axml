@@ -1,0 +1,3 @@
+<view>
+  <web-view src="https://demo-3d-web-product-configurator.omnisaas.cn/" />
+</view>
