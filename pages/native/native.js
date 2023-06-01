@@ -1,60 +1,51 @@
-// import { Engine, Scene } from "react-babylonjs";
-import {Engine, Scene, Vector3 } from '@babylonjs/core'; 
 
-var canvas = document.getElementById("renderCanvas");
-var engine = null;
-var scene = null;
-var sceneToRender = null;
+import * as BABYLON from 'babylonjs'
+import { Engine } from '@babylonjs/core/Engines/engine';
+import { Scene } from '@babylonjs/core/scene';
+import * as PIXI from "@tbminiapp/pixi-miniprogram-engine";
 
-var createDefaultEngine = function () {
-  return new BABYLON.Engine(
-    canvas,
-    true,
-    {
-      preserveDrawingBuffer: true,
-      stencil: true,
-      disableWebGL2Support: false
-    });
-};
+const createScene = function(engine, canvas) {
+  const scene = new BABYLON.Scene(engine);
 
-var startRenderLoop = function (engine, canvas) {
-  window.engine.runRenderLoop(function () {
-    if (sceneToRender && sceneToRender.activeCamera) {
-      sceneToRender.render();
-    }
-  });
-}
-
-const createScene = () => {
-  const scene = new BABYLON.Scene(window.engine);
-
-  const camera = new BABYLON.ArcRotateCamera(
-    "camera",
-    -Math.PI / 2,
-    Math.PI / 2.5,
-    3,
-    new BABYLON.Vector3(0, 0, 0));
+  const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 3, new BABYLON.Vector3(0, 0, 0));
   camera.attachControl(canvas, true);
 
   const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0));
-  const light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, -1, 0), scene);
-  light1.intensity = 0.5;
+
   const box = BABYLON.MeshBuilder.CreateBox("box", {});
 
   return scene;
-}
-
+};
 
 Page({
-  data: {
+  onCanvasReady() {
+    my._createCanvas({
+      id: "canvas",
+      success: (canvas) => {
+        const systemInfo = my.getSystemInfoSync();
+        const dpr = systemInfo.pixelRatio;
+        const windowWidth = systemInfo.windowWidth;
+        const windowHeight = systemInfo.windowHeight;
+        canvas.width = windowWidth * dpr;
+        canvas.height = windowHeight * dpr;
+        this.pixiCanvas = canvas;
+
+        const ctx = canvas.getContext('webgl'); // canvas.getContext('webgl')
+        const engine = new Engine(canvas, true);
+        var scene = createScene(engine, canvas);
+
+        engine.runRenderLoop(function () {
+          console.log("start");
+          // need draw ctx
+           scene.render();
+        });
+      },
+    });
   },
-  onLoad(query) {
-    createDefaultEngine();
-    // window.engine = asyncEngineCreation();
-    // if (!window.engine) throw 'engine should not be null.';
-    // startRenderLoop(window.engine, canvas);
-    // window.scene = createScene();
-    console.log('page onLoad', query)
+
+  onTouchHandle(event) {
   },
-  onShow() {}
-})
+  
+  onReady() {
+  }
+});

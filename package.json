@@ -1,19 +1,11 @@
 {
-  "name": "taobao_mini-program",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "babylonjs-hook": "^0.1.1"
-  },
   "devDependencies": {
-    "@babylonjs/core": "^6.5.0",
-    "@babylonjs/gui": "^6.5.0",
-    "@babylonjs/loaders": "^6.5.0"
+    "@babylonjs/core": "^6.5.1",
+    "babylonjs": "^6.5.1"
+  },
+  "dependencies": {
+    "@tbminiapp/pixi-miniprogram-engine": "^1.0.39",
+    "@types/pixi.js": "^4.7.5",
+    "pixi.js": "^7.2.4"
   }
 }

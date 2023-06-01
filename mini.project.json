@@ -1,4 +1,7 @@
 {
   "enableAppxNg": true,
-  "enableNodeModuleBabelTransform": true
+  "enableNodeModuleBabelTransform": true,
+  "node_modules_es6_whitelist": [
+    "@babylonjs/core"
+  ]
 }

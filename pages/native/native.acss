@@ -7,10 +7,6 @@
   place-items: center;
 }
 
-.canvas#canvas {
-  aspect-ratio: auto 3022 / 964;
-}
-
 .tool{
   position: fixed;
   left: 50%;

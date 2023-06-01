@@ -5,6 +5,7 @@
     "pages/native/native"
   ],
   "window": {
-    "defaultTitle": "POC"
+    "defaultTitle": "POC",
+    "enableSkia":"true"
   }
 }
